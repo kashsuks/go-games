@@ -70,20 +70,29 @@ func rps() (int, string) {
 }
 
 func main() {
-	if numberGuesser() {
-		fmt.Println("Good job! You got it right")
-	} else {
-		fmt.Println("That was wrong. Ahh bummer, maybe next time")
-	}
+	var gameNumber int
 
-	ans, choice := rps()
-	if ans == 1 {
-		fmt.Printf("Good job! You won! The computer chose: %v", choice)
-	} else if ans == 0 {
-		fmt.Printf("You tied with the computer. The computer chose: %v", choice)
-	} else if ans == -1 {
-		fmt.Printf("You lost. Ahh bummer, maybe next time. The computer chose: %v", choice)
+	fmt.Print("Would you like to play [1]Number Guessing Game or [2]Rock, Paper, Scissors: ")
+	fmt.Scan(&gameNumber)
+
+	if gameNumber == 1{
+		if numberGuesser() {
+			fmt.Println("Good job! You got it right")
+		} else {
+			fmt.Println("That was wrong. Ahh bummer, maybe next time")
+		}
+	} else if gameNumber == 2 {
+		ans, choice := rps()
+		if ans == 1 {
+			fmt.Printf("Good job! You won! The computer chose: %v", choice)
+		} else if ans == 0 {
+			fmt.Printf("You tied with the computer. The computer chose: %v", choice)
+		} else if ans == -1 {
+			fmt.Printf("You lost. Ahh bummer, maybe next time. The computer chose: %v", choice)
+		} else {
+			fmt.Println("Error")
+		}
 	} else {
-		fmt.Println("Error")
+		fmt.Println("Invalid choice, try again.")
 	}
 }
