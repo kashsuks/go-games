@@ -1,3 +1,3 @@
-module github.com/kashsuks/go-games
+module local/gogames
 
 go 1.25.0

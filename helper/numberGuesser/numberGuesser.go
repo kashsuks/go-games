@@ -1,15 +1,16 @@
 package numberGuesser
+
 import (
 	"fmt"
-	"github.com/kashsuks/go-games/helper/utils/randInt"
+	"local/gogames/helper/utils"
 )
 
-func main() bool {
+func PlayGame() bool {
 	var userInput int
 	var randomInt int
 	var state bool
 
-	randomInt = numberGenerator()
+	randomInt = utils.GenerateRandomNumber()
 
 	fmt.Print("Enter your guess (between 0 and 99): ")
 	fmt.Scan(&userInput)

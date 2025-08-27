@@ -1,10 +1,11 @@
 package rps
+
 import (
 	"fmt"
-	"github.com/kashsuks/go-games/helper/utils/randInt"
+	"math/rand"
 )
 
-func main() (int, string) {
+func PlayGame() (int, string) {
 	var state int
 	var userInput string
 	var choices = [3]string{"rock", "paper", "scissors"}
