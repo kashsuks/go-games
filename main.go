@@ -5,33 +5,32 @@ import (
 	"time"
 )
 
-func numberGenerator() {
+func numberGenerator() int {
 	rand.Seed(time.Now().UnixNano())
 
-	var number int = rand.Intn(100)
+	var number int = rand.Intn(100) //0-99
 	return number
 }
 
-func numberGuesser() {
-	var int userInput
-	var bool state
+func numberGuesser() bool {
+	var userInput int
+	var randomInt int
+	var state bool
 
 	randomInt = numberGenerator()
 
 	fmt.Print("Enter your guess (between 0 and 99): ")
 	fmt.Scan(&userInput)
 
-	if userInput == randomInt {
-		state = True
-	} else {
-		state = False
-	}
+	state = (userInput == randomInt)
 
 	return state
-
 }
 
-
 func main() {
-	numberGenerator()
+	if numberGuesser() {
+		fmt.Println("Good job! You got it right")
+	} else {
+		fmt.Println("That was wrong. Ahh bummer, maybe next time")
+	}
 }
