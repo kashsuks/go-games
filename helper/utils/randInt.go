@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-func GenerateRandomNumber() int {
+func GenerateRandomNumber(max int) int {
 	rand.Seed(time.Now().UnixNano())
-	var number int = rand.Intn(100) //0-99
+	var number int = rand.Intn(max) // 0 to max inclusive
 	return number
 }

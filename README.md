@@ -1,2 +1,2 @@
 # go-games
-My first Go project!! Simple cli games
+This is my first go project

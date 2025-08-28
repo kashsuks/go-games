@@ -2,10 +2,8 @@ package main
 
 import (
 	"fmt"
-	// "math/rand"
-	// "time"
 	"local/gogames/helper/numberGuesser"
-	// "local/gogames/helper/roulette"
+	"local/gogames/helper/roulette"
 	"local/gogames/helper/rps"
 )
 
@@ -32,15 +30,14 @@ func main() {
 		} else {
 			fmt.Println("Error")
 		}
-	} 
-	// else if gameNumber == 3 {
-	// 	won, number := roulette.PlayGame()
-	// 	if won {
-	// 		fmt.Printf("Congratulations! You won! The number was: %d\n", number)
-	// 	} else {
-	// 		fmt.Printf("Sorry, you lost. The number was: %d\n", number)
-	// 	}
-	// } else {
-	// 	fmt.Println("Invalid choice, try again.")
-	// }
+	} else if gameNumber == 3 {
+		won, number := roulette.PlayGame()
+		if won {
+			fmt.Printf("Congratulations! You won! The number was: %d\n", number)
+		} else {
+			fmt.Printf("Sorry, you lost. The number was: %d\n", number)
+		}
+	} else {
+		fmt.Println("Invalid choice, try again.")
+	}
 }

@@ -10,7 +10,7 @@ func PlayGame() bool {
 	var randomInt int
 	var state bool
 
-	randomInt = utils.GenerateRandomNumber()
+	randomInt = utils.GenerateRandomNumber(99)
 
 	fmt.Print("Enter your guess (between 0 and 99): ")
 	fmt.Scan(&userInput)
